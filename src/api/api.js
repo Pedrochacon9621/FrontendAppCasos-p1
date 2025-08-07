@@ -120,16 +120,14 @@ export const login = async(usuario) => {
         expires: 1, // Expira en 1 día
         path: '/',  // Disponible en todo el dominio
     });
-    console.log('Token guardado en cookies:', response.data.token);
     return response
 }
 
 export const logout = () => {
     // Eliminar la cookie 'jwt'
     Cookies.remove('jwt', {
-        path: '/', // todo el dominio, debe ser igual a cuando se crea
+        path: '/', 
     });
-    console.log('Token eliminado de cookies');
     // Redirigir al usuario a la pantalla de login
     window.location.href = "/form1"; 
 }

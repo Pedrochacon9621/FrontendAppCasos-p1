@@ -6,7 +6,6 @@ import { useContext } from "react"
 
 export function CasosLista() {
    
-    
     const params = useParams()
     const {usuariog, setUsuariog} = useContext(UserContext)
     const navigate = useNavigate()
@@ -29,7 +28,7 @@ export function CasosLista() {
                 const resData = res.data
                 // Filtrar coincidencias
                 const resultados = resData.filter(caso => {
-                    // Ajusta la condición de coincidencia según tus datos
+                    // Ajusta la condicion de coincidencia según los datos
                     return caso.nombre_caso.toLowerCase().includes(busqueda.toLowerCase()) || 
                     caso.id_user.nombre1.toLowerCase().includes(busqueda.toLowerCase()) ||
                     caso.id_user.apellido1.toLowerCase().includes(busqueda.toLowerCase())||
@@ -38,7 +37,7 @@ export function CasosLista() {
                 });
                 setCasos(resultados);
             }else{
-            //SI NO SE CARGAN TODOS LOS CASOS, comportamiento DEFAULT    
+            //SI NO SE CARGAN TODOS LOS CASOS -- comportamiento DEFAULT    
                 const res = await casosConsulta()
                 setCasos(res.data)
             }  

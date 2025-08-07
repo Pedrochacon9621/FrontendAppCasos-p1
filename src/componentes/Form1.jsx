@@ -29,7 +29,7 @@ export function Form1() {
         } catch (error) {
             // Mostrar una alerta con un mensaje amigable y el error
             alert(`Usuario o contraseña incorrecta. Detalles: ${error.message}`);
-            console.error('Error durante el inicio de sesión:', error); // Para depuración en consola
+            console.error('Error durante el inicio de sesión:', error);
         }
         
     })

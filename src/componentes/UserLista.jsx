@@ -23,7 +23,7 @@ export function UserLista() {
                 const resData = res.data
                 // Filtrar coincidencias
                 const resultados = resData.filter(usuario => {
-                // Ajusta la condición de coincidencia según tus datos                
+                // Ajusta la condición de coincidencia según los datos                
                 return usuario.nombre1.toLowerCase().includes(busqueda.toLowerCase()) ||
                 usuario.nombre2.toLowerCase().includes(busqueda.toLowerCase()) ||
                 usuario.apellido1.toLowerCase().includes(busqueda.toLowerCase())||

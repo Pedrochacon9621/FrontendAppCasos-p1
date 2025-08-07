@@ -23,7 +23,7 @@ export function CategoriasLista() {
                 const resData = res.data
                 // Filtrar coincidencias
                 const resultados = resData.filter(cat => {
-                // Ajusta la condición de coincidencia según tus datos                
+                // Ajusta la condición de coincidencia según los datos                
                 return cat.nombre_cat.toLowerCase().includes(busqueda.toLowerCase())
                 });
                 setCategorias(resultados);                        

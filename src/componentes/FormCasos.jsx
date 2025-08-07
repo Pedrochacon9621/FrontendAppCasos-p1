@@ -40,7 +40,7 @@ export function FormCasos() {
                 setValue("id_client", res.data.id_client.id_client)    
                 setValue("listo", res.data.listo)
             }else{
-                //limiar los campos del formulario:
+                //limpiar los campos del formulario:
                 reset({
                     nombre_caso: "",
                     descripcion_caso: "",

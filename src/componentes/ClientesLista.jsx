@@ -22,7 +22,7 @@ export function ClientesLista() {
                 const resData = res.data
                 // Filtrar coincidencias
                 const resultados = resData.filter(cliente => {
-                // Ajusta la condición de coincidencia según tus datos
+                // Ajusta la condición de coincidencia según los datos
                 
                 return cliente.nombre1_client.toLowerCase().includes(busqueda.toLowerCase()) ||
                 cliente.nombre2_client.toLowerCase().includes(busqueda.toLowerCase()) ||
@@ -33,7 +33,7 @@ export function ClientesLista() {
                 });
                 setClientes(resultados);
             }else{
-                //SI NO SE CARGAN TODOS LOS CASOS, comportamiento DEFAULT
+                //SI NO SE CARGAN TODOS LOS CASOS -- comportamiento DEFAULT
                 const res = await todosClientes()
                 setClientes(res.data)
                 console.log(res.data);
