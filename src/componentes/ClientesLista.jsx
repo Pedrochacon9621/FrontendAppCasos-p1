@@ -17,7 +17,7 @@ export function ClientesLista() {
         async function cargarClientes() {
             if (params.busqueda) {
                 //LOGICA PARA LA BUSQUEDA FILTRADA:
-                const busqueda = decodeURIComponent(params.busqueda)
+                const busqueda = decodeURIComponent(params.busqueda)// convierte la url en texto legible
                 const res = await todosClientes()
                 const resData = res.data
                 // Filtrar coincidencias

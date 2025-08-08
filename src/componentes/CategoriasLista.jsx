@@ -18,7 +18,7 @@ export function CategoriasLista() {
             // SI HAY PARAMS SIGNIFICA QUE SE ESTA BUSCANDO EN LA BARRA DE BUSQUEDA
             if (params.busqueda) {
                 //LOGICA PARA LA BUSQUEDA FILTRADA:
-                const busqueda = decodeURIComponent(params.busqueda)
+                const busqueda = decodeURIComponent(params.busqueda)// convierte la url en texto legible
                 const res = await categoriasConsulta()
                 const resData = res.data
                 // Filtrar coincidencias

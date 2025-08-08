@@ -2,7 +2,7 @@ import {useForm} from "react-hook-form"
 import { login, rolUser} from "../api/api"
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react"
-//Formulario de LOGIN
+//Formulario de LOGIN:
 export function Form1() {
     const navigate = useNavigate()
     const {register, handleSubmit} = useForm()

@@ -23,7 +23,7 @@ export function CasosLista() {
             //por lo tanto se procede a filtrar caso:
             if (params.busqueda) {
                 //LOGICA PARA LA BUSQUEDA FILTRADA:
-                const busqueda = decodeURIComponent(params.busqueda)
+                const busqueda = decodeURIComponent(params.busqueda)// convierte la url en texto legible
                 const res = await casosConsulta()
                 const resData = res.data
                 // Filtrar coincidencias
@@ -37,7 +37,7 @@ export function CasosLista() {
                 });
                 setCasos(resultados);
             }else{
-            //SI NO SE CARGAN TODOS LOS CASOS -- comportamiento DEFAULT    
+            //SI NO, SE CARGAN TODOS LOS CASOS -- comportamiento DEFAULT    
                 const res = await casosConsulta()
                 setCasos(res.data)
             }  

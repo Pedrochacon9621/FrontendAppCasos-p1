@@ -13,7 +13,7 @@ export function Navegacion() {
 
   const onSubmit = handleSubmit(busqueda=>{
       if (ruta.includes('/casos')) {
-        navigate(`/casos/${busqueda.busqueda}`)
+        navigate(`/casos/${busqueda.busqueda}`) // es busqueda.busqueda porque el input del form del nav que es la barra de busqueda, esta registrado como busqueda y al obj de esta funcion le puse tambien busqueda
       }
       if (ruta.includes('/clientes')) {
         navigate(`/clientes/${busqueda.busqueda}`)

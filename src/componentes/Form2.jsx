@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import { actualizarUsuario, crearUsuario, usuariosID, rolUser } from "../api/api"
 import { UserContext } from "./context/UserContext"
 import { useContext } from "react"
+//FORMULARIO DE REGISTRAR Y ACTUALIZAR USUARIO:
 export function Form2() {
     //Contexto Global para manejar el ROL del usuario en LA APP:
     const {usuariog, setUsuariog} = useContext(UserContext)
