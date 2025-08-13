@@ -9,7 +9,7 @@ import { UserLista } from './componentes/UserLista';
 import { CategoriasLista } from './componentes/CategoriasLista';
 import { ClientesLista } from './componentes/ClientesLista';
 import { UserProvider } from './componentes/context/UserContext';
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Navigate, HashRouter} from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="bg-secondary pb-4" style={{ minHeight: "100vh" }}>
        <UserProvider>
-        <BrowserRouter>
+        <HashRouter>
           {/* Renderizar la navegación solo si la ruta no es "/form1" */}
           {location.pathname !== "/form1" && location.pathname !== "/" && <Navegacion />}
           <Routes>
@@ -42,7 +42,7 @@ function App() {
             <Route path='/clientes' element={<ClientesLista/>}/> 
             <Route path='/clientes/:busqueda' element={<ClientesLista/>}/>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </UserProvider>
     </div>
   )
