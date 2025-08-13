@@ -33,7 +33,7 @@ function App() {
             <Route path='/form4/:id_cat' element={<FormCat/>}/>
             <Route path='/form5' element={<FormCasos/>}/>
             <Route path='/form5/:id_caso' element={<FormCasos/>}/>
-            <Route path='/casos' element={<CasosLista/>}/>
+            <Route path='/casos/' element={<CasosLista/>}/>
             <Route path='/casos/:busqueda' element={<CasosLista/>}/>
             <Route path='/usuarios' element={<UserLista/>}/>
             <Route path='/usuarios/:busqueda' element={<UserLista/>}/>
