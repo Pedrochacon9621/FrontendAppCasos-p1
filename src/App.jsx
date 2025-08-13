@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="bg-secondary pb-4" style={{ minHeight: "100vh" }}>
        <UserProvider>
-        <HashRouter>
+        <BrowserRouter>
           {/* Renderizar la navegación solo si la ruta no es "/form1" */}
           {location.pathname !== "/form1" && location.pathname !== "/" && <Navegacion />}
           <Routes>
@@ -42,7 +42,7 @@ function App() {
             <Route path='/clientes' element={<ClientesLista/>}/> 
             <Route path='/clientes/:busqueda' element={<ClientesLista/>}/>
           </Routes>
-        </HashRouter>
+        </BrowserRouter>
       </UserProvider>
     </div>
   )
