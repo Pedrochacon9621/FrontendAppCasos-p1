@@ -76,6 +76,9 @@ export function Navegacion() {
                       <li class="nav-item">
                         <Link class="nav-link" to="/categorias">Categorias</Link>
                       </li>
+                      <li class="nav-item">
+                        <Link class="nav-link" to="/politica">Política de privacidad</Link>
+                      </li>
                       <li class="nav-item" onClick={()=>{logout()}}>
                         <Link class="nav-link">Cerrar Sesión</Link>
                       </li>
