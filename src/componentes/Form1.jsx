@@ -1,11 +1,21 @@
 import {useForm} from "react-hook-form"
 import { login, rolUser} from "../api/api"
 import { useNavigate } from "react-router-dom"
-import { useEffect } from "react"
+import { useEffect, useRef} from "react"
+import { ModalPrivacidad } from "./modalPrivacidad"
+
+import { Modal } from 'bootstrap';
+
+
+
+
+
 //Formulario de LOGIN:
 export function Form1() {
     const navigate = useNavigate()
     const {register, handleSubmit} = useForm()
+    //Estado para el Modal:
+   const modalRef = useRef(null);
     useEffect(()=>{
         //Funcion pasar a la pagina de casos si ya la sesion esta iniciada
         async function verificarLogin(params) {
@@ -17,6 +27,19 @@ export function Form1() {
         }
         verificarLogin()
     },[])
+
+    // Nuevo useEffect solo para el modal
+    useEffect(() => {
+        const modal = new Modal(modalRef.current);
+        modal.show();
+        // Limpieza solo para el modal
+        return () => {
+        modal.hide();
+        document.body.classList.remove('modal-open');
+        document.querySelectorAll('.modal-backdrop').forEach((el) => el.remove());
+        };
+    }, []);
+
     //Funcion del boton iniciar sesion:
     const onSubmit = handleSubmit(async usuario=>{  
         try {
@@ -48,6 +71,9 @@ export function Form1() {
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                 </form>
             </div>
+            {/* Modal renderizado y referenciado */}
+              <ModalPrivacidad modalRef={modalRef} />
+
         </div>
     )
 }

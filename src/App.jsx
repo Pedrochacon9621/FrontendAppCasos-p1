@@ -8,6 +8,7 @@ import { CasosLista } from './componentes/CasosLista';
 import { UserLista } from './componentes/UserLista';
 import { CategoriasLista } from './componentes/CategoriasLista';
 import { ClientesLista } from './componentes/ClientesLista';
+import {Politica} from './componentes/Politica';
 import { UserProvider } from './componentes/context/UserContext';
 import {BrowserRouter, Routes, Route, Navigate, HashRouter} from 'react-router-dom'
 
@@ -41,6 +42,9 @@ function App() {
             <Route path='/categorias/:busqueda' element={<CategoriasLista/>}/>
             <Route path='/clientes' element={<ClientesLista/>}/> 
             <Route path='/clientes/:busqueda' element={<ClientesLista/>}/>
+            <Route path='/politica' element={<Politica/>}/>
+            
+
           </Routes>
         </BrowserRouter>
       </UserProvider>
