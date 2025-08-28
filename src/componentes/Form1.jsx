@@ -2,13 +2,9 @@ import {useForm} from "react-hook-form"
 import { login, rolUser} from "../api/api"
 import { useNavigate } from "react-router-dom"
 import { useEffect, useRef} from "react"
-import { ModalPrivacidad } from "./modalPrivacidad"
+import { ModalPrivacidad } from "./ModalPrivacidad"
 
 import { Modal } from 'bootstrap';
-
-
-
-
 
 //Formulario de LOGIN:
 export function Form1() {
