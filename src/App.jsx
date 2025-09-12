@@ -18,7 +18,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="bg-secondary pb-4" style={{ minHeight: "100vh", minWidth:"720px" }}>
+    <div className="bg-secondary pb-4" style={{  maxHeight:"100vh", minHeight: "1280px", minWidth:"720px" }}>
        <UserProvider>
         <BrowserRouter>
           {/* Renderizar la navegación solo si la ruta no es "/form1" */}
