@@ -70,7 +70,7 @@ export function ClientesLista() {
                 </div>
             )}
             
-            <div className="container p-2 bg-light rounded" style={{width:"70%", margin:"0 auto"}}>
+            <div className="container p-2 bg-light rounded" style={{margin:"0 auto"}}>
                 <table className="table table-striped" >
                     <thead>
                         <tr>

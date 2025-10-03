@@ -57,7 +57,7 @@ export function CategoriasLista() {
             <div className="d-flex justify-content-start" style={{width:"25%", margin:"0 auto"}}>
                 <Link to="/form4" className="btn btn-primary mb-2" >Crear Nuevo</Link>
             </div>
-            <div className="container p-2 bg-light rounded" style={{width:"25%", margin:"0 auto"}}>
+            <div className="container p-2 bg-light rounded" style={{maxWidth:"500px", margin:"0 auto"}}>
                 <table className="table table-striped" >
                     <thead>
                         <tr>

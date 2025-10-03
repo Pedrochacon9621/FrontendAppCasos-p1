@@ -67,7 +67,7 @@ export function UserLista() {
                     <Link to="/form2" className="btn btn-primary mb-2">Crear Nuevo</Link>
                 </div>
             )}
-            <div className="container p-2 bg-light rounded" style={{width:"70%", margin:"0 auto"}}>
+            <div className="container p-2 bg-light rounded" style={{margin:"0 auto"}}>
                 <table className="table table-striped" >
                     <thead>
                         <tr>
