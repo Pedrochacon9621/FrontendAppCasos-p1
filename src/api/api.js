@@ -3,7 +3,8 @@ import axios from 'axios'
 
 const token = Cookies.get("jwt"); // Obtener el token de las cookies
 const apiUrl = axios.create({
-    baseURL: 'https://backendappcasos-p1.onrender.com/api',
+    baseURL: 'https://backend-app-casos-p1.vercel.app/api',
+    //baseURL: 'https://backendappcasos-p1.onrender.com/api',
     //"https://backendappcasos-p1-production.up.railway.app/api",
     headers: {
         Authorization: `Bearer ${token}`, // Incluir el token en todas las solicitudes para que el backend valide rol del usuario en todo momento
